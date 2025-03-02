@@ -32,7 +32,29 @@ let myobj ={
     age : 22,
 }
 console.log(myobj);
-console.log(typeof myobj);//output will be object
+console.log(typeof myobj);//output will be object 
 
+// +++++++++++++++++++++++++++++++++++
 
+// stack(primitive) , Heap(non primitive)
+
+let myname = "manav"
+
+let anname = myname
+anname = "harsh"
+
+console.log(myname);
+console.log(anname);// here we used a copy so there will be no change in the original one
+
+let userone = {
+    email : "manav@google.com",
+    upi : "user@ybl"
+}
+
+let usertwo = userone
+
+usertwo.email ="harsh@gmail.com" // its how we acces elements of an object by  using dot
+
+console.log(userone.email);
+console.log(usertwo.email); // here we used the reference so it will work with original value , change in one email effect on the other 
 
