@@ -5,7 +5,7 @@
 // console.log(2 != 1);
 
 
-// console.log("2" > 1);
+// console.log("2" > 1); 2 will be change into the number and then we will compare it
 // console.log("02" > 1);
 
 console.log(null > 0);
