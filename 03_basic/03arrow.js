@@ -24,16 +24,16 @@ const user ={
 //     console.log(this.username);
     
 // }
-// chai() // the output will be undefined as you can use this in function without object
+// chai() // the output will be undefined as you are using this in function without object
 
 
 //ARROW FUNCTION
 const chai = () => {
-    let username = "manav"
+    let username = "manav kumar"
     console.log(this.username);
     
 }
-// chai()
+//chai() // the output will be undefined as you are using this in function without object
 
 
 //EXPLICT ARROW FUNCTION -> neet to write return
