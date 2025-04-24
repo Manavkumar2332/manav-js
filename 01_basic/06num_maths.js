@@ -8,7 +8,7 @@ console.log(balance.toString());
 // console.log(balance.toString().length); 
 // // here we used string operation as well 
 
-// console.log(balance.toFixed(2));
+// console.log(balance.toFixed(2)); its number method not a string method
 // // its output is 145.00
 
 // const value = 1123.856
