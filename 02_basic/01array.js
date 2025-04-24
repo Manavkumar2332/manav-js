@@ -7,7 +7,7 @@
 
 1. JavaScript arrays are resizable and can contain a mix of different data types.
 
-2.JavaScript arrays are not associative arrays and so, array elements can only access by non negative numbers 
+2.JavaScript arrays are not associative arrays and so, array elements can only access by non negative numbers or you can say index 
 
 3.JavaScript array-copy operations create shallow copies. it means the values in array refers to the same point so change in copies will change the actual value
 
