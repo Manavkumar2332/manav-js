@@ -9,10 +9,12 @@ console.log(balance.toString());
 // // here we used string operation as well 
 
 // console.log(balance.toFixed(2)); its number method not a string method
+//decide how much values has to be present after decimal
 // // its output is 145.00
 
 // const value = 1123.856
 // console.log(value.toPrecision(4));
+//estimate the value at which you tell , here it is till 4
 // out put will be 1124 as it give us precise value
 
 // const value2 = 1000000
@@ -38,6 +40,8 @@ console.log((Math.random()*10)+1);
 // it is use to print random numbers like in ludo
 
 console.log(Math.floor(Math.random()*10)+1);
+//  Math.floor()
+// Always rounds down to the nearest integer. (4.9) 4 and always give integer value not decimal
 // by using this number will always be greator then 0
 // we add one as floor can give zero sometimes , to avoid that we added zero
 // it will give value from 1 to 9
