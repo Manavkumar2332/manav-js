@@ -46,10 +46,10 @@ let str2 = "manav"
 let str3 = str1 + str2
 // console.log(str3);
 
-// console.log("1" + 2);
-// console.log( 1 + "2");
-// console.log( "1" + 2 + 2);
-// console.log(1 + 2 + "2");
+// console.log("1" + 2); 12
+// console.log( 1 + "2"); 12
+// console.log( "1" + 2 + 2);  122   When the first operand is a string, everything gets coerced into strings and concatenated.
+// console.log(1 + 2 + "2");  32
 
 let gamecounter = 100
 gamecounter++
