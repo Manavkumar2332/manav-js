@@ -16,6 +16,7 @@ console.log(balance.toString());
 // console.log(value.toPrecision(4));
 //estimate the value at which you tell , here it is till 4
 // out put will be 1124 as it give us precise value
+// return string
 
 // const value2 = 1000000
 // console.log(value2.toLocaleString());
@@ -45,6 +46,7 @@ console.log(Math.floor(Math.random()*10)+1);
 // by using this number will always be greator then 0
 // we add one as floor can give zero sometimes , to avoid that we added zero
 // it will give value from 1 to 9
+// it returns number
 
 const min = 10
 const max = 20
