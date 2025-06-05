@@ -46,13 +46,26 @@ title.innercontext - give you the hidden content by css or html  -' DOM learning
   document.querySelector('h2') - it will give you the first h2 
   document.querySelector('#title') - it will give the id which name is title and yeah title is use by hashtag and class are use by dot
   document.querySelector('input[type = "password"]') - ot will give the input of password anywhere present on the page -->
-  <!-- document.querySelectorAll('ul') - it gives you all the similar case and it also gives you the node list which not a pure array so you can't use foreach loop on it but you canuse it by storing it in other variable 
+
+  <!-- document.querySelectorAll('ul') - it gives you all the similar case and it also gives you the node list which not a pure array but you can use foreach loop on it but you can't use other operation like array
+
   const value = document.querySelectorAll('ul') - just like this in this we can use foreach loop  -->
   <!-- templist[0].style.color = 'green' - we need to use index to use properties so it is similar to array but not an array -->
 <!-- 
 templist.forEach((item)=> item.style.backgroundColor = 'green') - you can use foreach like this and can style every item at once by using querySelectorAll -->
-<!-- you can use foreach on node list but not map and differet things like filter for that purpose you need to convert the node list into an array and then can perform operations on it to convert it into array you can simple write array from or use spread operator to convert it into an array as spread operator gives you the array  -->
+<!-- you can use foreach on node list but not map and differet things like filter for that purpose you need to convert the node list into an array and then can perform operations on it to convert it into array you can simple write array.from or use spread operator to convert it into an array as spread operator gives you the array  -->
 <!-- 
 document.getElementsByClassName('list-item') - we get element by class name but we cant use loop on it so to use loop we need to convert it into array by using array.from  -->
 
 <!-- querySelectorAll => nodelist => foreach => style  -->
+
+<!-- document.querySelectorAll('h2')
+const value1 = document.querySelectorAll('h2')
+const value2 = Array.from(value1)
+value2.forEach(function (name) {
+    name.style.color = 'red'
+}) -->
+
+<!-- 1. document.getElementsByTagName()
+2. document.getElementsByClassName()
+element.children - they all give html collection which we need to convert into array to use foreach -->
