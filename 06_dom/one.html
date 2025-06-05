@@ -1,0 +1,58 @@
+<!-- DOM -->
+<!-- DOM stands for document object model -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+    <title>DOM learning</title>
+    <style>
+        .bg-black{
+            background-color: #121211;
+            color: white;
+        }
+    </style>
+    
+</head>
+<body class="bg-black">
+    <div >
+        <h1 id="title" class="heading"> DOM learning on chai or code <span style="display: none;">text text</span></h1>
+        <h2>Lorem, ipsum dolor.</h2>
+        <h2>Lorem ipsum dolor sit amet consectetur.</h2>
+        <p>Lorem ipsum dolor sit amet</p>
+        <input type="password" name="" id="">
+        <ul class="list-item">one</ul>
+        <ul class="list-item">two</ul>
+        <ul class="list-item">three</ul>
+
+
+    </div>
+</body>
+</html>
+
+<!-- after writing the html code use live server and then open the console in inspect mode to write all these commands -->
+
+<!-- document.getElementById('title').id  - it is use to grab element by id
+document.getElementById('title').class   - it is use to grab element by class
+const titel = document.getElementById('title') 
+titel.style.backgroundColor = 'green'
+titel.style.padding =15px
+titel.style.borderRadius = "15px" -->
+<!-- title.innertext - gives you the the display content -'DOM learning on chai or code'
+title.innercontext - give you the hidden content by css or html  -' DOM learning on chai or code text text' --> 
+<!-- title.innerHTML - give you the html properties but not the content for that we can use innercontext and innertext -->
+ <!-- querySelector() returns the first matching element 
+  document.querySelector('h2') - it will give you the first h2 
+  document.querySelector('#title') - it will give the id which name is title and yeah title is use by hashtag and class are use by dot
+  document.querySelector('input[type = "password"]') - ot will give the input of password anywhere present on the page -->
+  <!-- document.querySelectorAll('ul') - it gives you all the similar case and it also gives you the node list which not a pure array so you can't use foreach loop on it but you canuse it by storing it in other variable 
+  const value = document.querySelectorAll('ul') - just like this in this we can use foreach loop  -->
+  <!-- templist[0].style.color = 'green' - we need to use index to use properties so it is similar to array but not an array -->
+<!-- 
+templist.forEach((item)=> item.style.backgroundColor = 'green') - you can use foreach like this and can style every item at once by using querySelectorAll -->
+<!-- you can use foreach on node list but not map and differet things like filter for that purpose you need to convert the node list into an array and then can perform operations on it to convert it into array you can simple write array from or use spread operator to convert it into an array as spread operator gives you the array  -->
+<!-- 
+document.getElementsByClassName('list-item') - we get element by class name but we cant use loop on it so to use loop we need to convert it into array by using array.from  -->
+
+<!-- querySelectorAll => nodelist => foreach => style  -->
