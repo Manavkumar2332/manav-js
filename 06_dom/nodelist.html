@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chai aur code</title>
+</head>
+<body style="background-color: #121212; color: #fff;">
+    
+</body>
+<script>
+    const div = document.createElement('h1')
+    console.log(div);
+    div.className ='main'
+    div.id= 'myid'
+    div.setAttribute ("title","generated title") // developer prefer this as it set values on the same time where as id and classname first search and select it then pull it and then change it due to which it takes more time than set attribute
+
+    div.style.backgroundColor = 'orange'
+    div.style.padding = "15px" 
+    // yha tk jo hai vo memory mai hai page pr nai aya hai page pr lane ke liye abb steps use krenge hum
+    div.innerHTML = "chai aur code" // same reason developer isey prefer nai krte kunki yeah overwrite krta hai chizo ko
+     const addtext =document.createTextNode("chai aur code") // actually humne koi text nai likh rkha tha body mai so humne text add kra hai jiske upar vo orange or padding add hogi
+     div.appendChild(addtext) // humne phele text node se text create kiye then usko div mai dala or fir div ko body mai dala
+     document.body.appendChild(div)
+</script>
+</html>
