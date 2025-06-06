@@ -23,10 +23,24 @@ form.addEventListener('submit',function(e){
   {
     results.innerHTML =`Please give a valid weight ${weight}`
   }
+  
   else{
     const bmi = (weight / ((height*height)/10000)).toFixed(2)
-    results.innerHTML=`<span>${bmi}</span>`
+    if(bmi>25)
+    {
+      results.innerHTML = `<span>over weight ${bmi}</span>`
+    }
+    elseif(bmi<18.625 && bmi<25)
+    {
+      results.innerHTML = `<span>normal range ${bmi}</span>`
+    }
+    elseif(bmi<18.6)
+    {
+      results.innerHTML = `<span>under weight ${bmi}</span>`
+    }
+    
   }
+  
 });
 
 //So why do we use innerHTML?
