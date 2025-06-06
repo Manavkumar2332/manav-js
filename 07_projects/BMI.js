@@ -1,9 +1,12 @@
+// BMI calculator = body mass index
+
+
 const form = document.querySelector('form')
 
 // this usecase will give you empty value
 // const height =parseInt(document.querySelector('#height').value) 
 
-form.addEventListener('submit',function(e){
+form.addEventListener('submit',function(e){ // we used here submit not button because we wrote submit not button in html file
   e.preventDefault()
 
   const height =parseInt(document.querySelector('#height').value) //the value we got from this is in form of string to convert it into number we use parseint
