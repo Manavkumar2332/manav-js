@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chai aur code | DOM</title>
+</head>
+<body style="background-color: #212121; color: white;">
+    <ul class="language">
+        <li>javascript</li>
+    </ul>
+</body>
+<script>
+    //STEPS
+    //first we created a function 
+    //create element which is list in this case and then store it into value 
+    //by using innerhtml we can put language name by using backticks
+    // we used query selector to select the class and then we append the value in it to display on page
+    // then we call the function by giving it arguments
+
+
+    function addlang(langname){ // here we created a function to add language by using dom
+        const value = document.createElement('li');
+        value.innerHTML =`${langname}` // due to this line we traverse the whole dom 
+        document.querySelector('.language').appendChild(value) // queryselector is very smart it traverse the whole document to find the item 
+    }
+    addlang("python")
+    addlang("ruby")
+
+    
+    function addoptilang (langname) //optimized way 
+    {
+        const list = document.createElement('li')
+        const addtext = document.createTextNode(langname)
+        list.appendChild(addtext) // it makes it optimized as we just created a textnode and pushed it into list 
+        document.querySelector('.language').appendChild(list)
+    }
+    addoptilang("cpp")
+
+    // cpp => langname => created list => add text => pushed text to list => pushed list to class
+
+    //edit
+    const secondlang = document.querySelector('li:nth-child(2)') // we use selector to select the 2nd item by nth child
+    const newli = document.createElement('li') // created a new list
+    newli.textContent = "mojo"  // added text in list name newli and ya here we can use innerHTML too
+    secondlang.replaceWith(newli) // then secondlang which we searched by query selector is replaced with items present in newli list
+
+    // edit 
+
+    const firstlang = document.querySelector('li:nth-child(1)')
+    const newli1 = document.createElement('li')
+    newli1.textContent = "manav"
+    firstlang.replaceWith(newli1)
+
+    //REMOVE
+
+    const lastlang = document.querySelector('li:last-child')
+    lastlang.remove()
+</script>
+</html>
