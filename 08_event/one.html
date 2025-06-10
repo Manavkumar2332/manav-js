@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html events</title>
+</head>
+<body style="background-color: #121212; color: aliceblue;" >
+    <h2>Amazing images</h2>
+    <div>
+        <ul id = "images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/1172064/pexels-photo-1172064.jpeg?auto=compress&cs=tinysrgb&w=600" alt="photoshop"></li>
+
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/1658967/pexels-photo-1658967.jpeg?auto=compress&cs=tinysrgb&w=600" alt=""></li>
+
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/1107717/pexels-photo-1107717.jpeg?auto=compress&cs=tinysrgb&w=600" alt=""></li>
+
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/65614/coast-beach-rock-stones-65614.jpeg?auto=compress&cs=tinysrgb&w=600" alt=""></li>
+
+            <li><a style="color: aliceblue;" href="https://www.google.com/search?q=google+imges&ie=UTF-8#vhid=zephyr:0&vssid=atritem-https://images.google.com/" id="google">google</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    // document.getElementById('owl').onclick = function (){
+    //     alert("owl clicked")
+    // } this approach gives you less features and less scalable
+
+    //type, timestamp , defaultprevent,target,toelement,srcelement, currentTarget, clientX, client Y, screenX, screenY, altkey, ctrlkey, shiftkey, keycode
+
+    // document.getElementById('images').addEventListener('click',function(){
+    //     console.log("clicked inside the ul");
+        
+    // },false)
+    //  document.getElementById('owl').addEventListener('click',function(e){
+    //     console.log("owl clicked");
+    //     e.stopPropagation() // though this propagtion stops here and don't go uppward  output- owl clicked
+    // },false)
+    //  // flase is used for event propagation 
+    // //it has 2 parts 
+    // //1.event bubbling (false)- from inside to outside 
+    // //eg - when you clicked the 4th images with owl tag it will show owl clicked and then it will show click inside the ul
+
+    // //2. event capturing(true) - opposite of bubbling
+    
+    // document.getElementById('google').addEventListener('click',function(e){
+    //      e.preventDefault()// this method does not let you go on the webpage and prevent its default functionality which navigate to other page
+    //      e.stopPropagation()// it will not clicked inside the ul as event bubbling is stoped
+    //     console.log('google clicked');
+        
+       
+    // },false)
+
+    // attachEvent() other approach 
+    // jQuery -on event listner
+
+
+   //we are here try to removing images
+    document.querySelector('#images').addEventListener('click',function(e){
+        // console.log(e.target.parentNode);// actually we want to remove the whole image so its parent also not available to se here it is li so by using parent node the li element will be removed
+
+        console.log(e.target.tagName);// by tagname we can see the name of the tag for eg if we clicked on the image it will show img tag if we click on the bulleten mark then it will show you li tag through this you'll get the tag name on which you can use if else condition , we usedtag name and then used if condtion that on remove images when we click on img tag 
+        if(e.target.tagName ==='IMG')
+       {
+         let removeIt = e.target.parentNode// we stored the target parent node in a variable and then we removed it by .remove fuunctionallity
+
+        removeIt.remove()
+       }
+        // if you click on dots that comes with li called bulleten marks then all images dis appear at once to prevent it  
+        
+    },false)
+
+</script>
+</html> 
