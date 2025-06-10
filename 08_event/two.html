@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>chai aur code</h1>
+    <button id="stop">stop</button>
+</body>
+<script>
+    const saymanav=function(){
+        console.log("manav"); // runs one time at what time you gave
+        
+    }
+    setTimeout(saymanav,2000) //it is a method but it also calls an api
+/*
+example of a call back function
+ setTimeout is a built-in JavaScript function where you tell it:
+
+what to do: The function (your callback) that you want to be executed.
+at what time: The delay (in milliseconds) after which that function should be executed.
+*/
+
+const changetext = function(){
+    document.querySelector('h1').innerHTML = "best js series"
+}
+const changeme =setTimeout(changetext,2000) // it will change the heading of the page after 2 sec
+
+document.querySelector('#stop').addEventListener('click',function(){
+    clearTimeout(changeme)
+})// bhai dekh agar tu settimeout and cleartime out ek sath use krta tho uska fayda nai hota ek trf tu timer laga rha ek trf vo clear kr rha hai isliye humne ek button ke through clear timeout ko use kiya abb jese hi stop button dabaunga 2 sec se phele tho text change nai hoga
+</script>
+</html>
