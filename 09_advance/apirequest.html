@@ -1,0 +1,37 @@
+<!-- Api request for asyn code  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: aliceblue;">
+    <p>hey hello my name is manav</p>
+</body>
+<script>
+    const requesturl = 'https://api.github.com/users/manavkumar2332'
+    const xhr=new XMLHttpRequest() // through this method we can make request
+    xhr.open('GET',requesturl)
+    xhr.onreadystatechange = function(){ //onreadystatechange tracks all the states and then console log track the state on which they reach and print
+
+        console.log(xhr.readyState); // use to track the status of request
+        if(xhr.readyState===4){
+            const data = JSON.parse(this.responseText)// convert this into json as the ajax request using https request is in the form of string
+
+            console.log(typeof data); // data came from url is in form of string so we had converted into object to use it
+            
+            console.log(data.followers); // we need to use to print things of current scope or context you can say
+            
+        }
+        
+
+    }
+    
+    
+    xhr.send()
+
+</script>
+</html>
