@@ -155,3 +155,26 @@ console.log(data);
 
 ✅ data is the message inside the envelope — the actual result from the API
  */
+
+/**
+ * FETCH INTERNAL WORKING
+ * 
+ * FETCHING IS DONE IN TWO STEPS
+ * 
+ * 1.data reserve - to store data - step 1
+ * a. onfulfilled[]- resolve
+ * b. onrejection[]- reject 
+ * both onfulfill and rejection are kind of array but you cant push values in it they are private in nature
+ * 
+ * 
+ * 2.web browser - call api  - step 2
+ * it will access web api either node api
+ * then it will send network request which is done by using a source like web api or node
+ * then 2 conditions will come either network req will go on network or it will not go , if any response has come thrugh req then it will go to full fill and if it will be reject then it will go to on rejection 
+ * 
+ * NOTE- even the reponse like 404 not find also directed to onfulfilled because it is the response after req is successfull connected to network
+ * 
+ *  response = fetch('something')
+ * 
+ * we got function in onfulfilled and on rejected because of network request we will use the function to get data and then data can be store into response and then it is availabe into global memory
+ */
