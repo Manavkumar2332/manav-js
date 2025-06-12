@@ -1,5 +1,6 @@
 // the promise object reprsent the eventual completion (or failiure) of an asyn operation and its resulting value
 // promises are complete in future like cryptography, file accessing etc
+// promises has to be create and the we consume it
 
 /**
  * 📦 Think of it like this:
@@ -120,7 +121,8 @@ consumepromisefive()
 
 //api req using async await
 
-// async function getuser() {
+// async function getuser() { //async tell that asynchronus work is going to come
+
 //     try {
 //         const response = await fetch('https://randomuser.me/api/')
 //         const data = await response.json()
@@ -144,3 +146,12 @@ console.log(data);
 
 })
 .catch((error)=>console.log(error));
+/**
+ * the data fetched from the API first lives inside the response object.
+ * 
+ * ✅ response is the envelope
+
+✅ response.json() opens the envelope and reads the actual content
+
+✅ data is the message inside the envelope — the actual result from the API
+ */
