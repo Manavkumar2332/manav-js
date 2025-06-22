@@ -11,6 +11,17 @@
 
 3.JavaScript array-copy operations create shallow copies. it means the values in array refers to the same point so change in copies will change the actual value
 
+When we use the spread operator to copy one array into another, the primitive (normal) elements are copied, but if there's any object or array inside, only their reference is copied., so when we use spread operator then we get a shallow copy which we use 
+
+example= 
+let user1 = {
+  name: "Manav",          // string (primitive)
+  address: {
+    city: "Delhi"         // object (reference)
+  }
+};
+
+let user2 = { ...user1 }; manav can be copy but as the address is another object inside user1 then we only get the refernce of address object , through spread operator we can send primitive form use1 to other object and change in that elements will not affect the original one as they are working shallow copy but if you change in an object will change the adress object too as it is not deeply copied 
 */
 
 let myarr = [5,6,3,4,8] // first method to declare array
@@ -63,7 +74,7 @@ let manavarray2 = [0,1,2,3,4,5,6]
 //2. second difference is that splice includes the second range as well like in example output is 1,2,3 so it includes 3 as well which is not present in slice
 
 console.log(manavarray2.splice(1,3));
-console.log(manavarray2); 
+console.log(manavarray2); //output [1,2,3]
 
 
 
