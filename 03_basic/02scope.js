@@ -5,6 +5,12 @@
 
 // we dont use var because it does not follow the concept of block scope , the data decalared in var always leak out means even if you declare it in a function the value of var can be use anywhere in the code which is not correct
 
+/*✅ But inside {} blocks (like if/for), it does leak:
+
+if (true) {
+  var x = 5;
+}
+console.log(x); // ✅ 5 → leaked from block*/
 // curly barces helps to delcare scope
 
 let a = 300
@@ -15,7 +21,7 @@ if(true){
     console.log("inner: ",a);
 }
 
-console.log(a);
+console.log(a); //300
 
 
 //IMPORTANT NOTE - // GLOBAL SCOPE IS DIFFERENT IN NODE JS AND DIFFERENT IN BROWSER CONSOLE
@@ -73,4 +79,11 @@ const value = function(num)
     return num+2
 }
 console.log(value(4));
+//*******************************************************
+
+console.log(add(4)); // ✅ Works!
+
+function add(num) { // this supports hoisting
+    return num + 2;
+}
 
