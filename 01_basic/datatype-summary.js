@@ -57,4 +57,15 @@ usertwo.email ="harsh@gmail.com" // its how we acces elements of an object by  u
 
 console.log(userone.email);
 console.log(usertwo.email); // here we used the reference so it will work with original value , change in one email effect on the other 
+ // output -harsh@gmail.com
+//harsh@gmail.com
+
+//******************************** to inherit properties from one object to other**************************
+
+// let usertwo = { ...userone };  // makes a shallow copy
+
+// usertwo.email = "harsh@gmail.com";
+
+// console.log(userone.email); // ➝ manav@google.com ✅
+// console.log(usertwo.email); // ➝ harsh@gmail.com ✅
 
