@@ -25,5 +25,6 @@ switch (month) {
 
     default:
         console.log("default case match");
-        break;
+        break; // break — stops the entire loop
+                // continue — skips current iteration only
 }
