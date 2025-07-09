@@ -28,7 +28,7 @@ createuser.prototype.printme = function(){
  tea.printme()
 /**
  * ✅ First new creates an empty object,
-✅ then this refers to that object,
+✅ then this refers to that object, and the score present in chai is refferd whe this.score++ is written 
 ✅ and finally that object is returned automatically.
  */
  
